@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="Sat, 26 Jul 1997 05:00:00 GMT>
-  <script src="script.js"></script>
+<head>
+  <title>Verification Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
+<body>
+  <h1>Verification Page</h1>
+  <p>Please enter your CEC ID to proceed:</p>
+  <input type="text" id="cecIdInput" placeholder="Enter CEC ID" />
+  <br />
+  <button onclick="verifyCEC()">Verify</button>
 
-</div>
+  <script>
+    function verifyCEC() {
+      // List of valid CEC IDs (without @cisco.com)
+      var validCECIds = [
+        "alaholli",
+        "lmcclees",
+        "gaberami",
+        "zduzgun",
+        "joschu",
+        "keshaffe",
+        "justilop",
+        "kaymcmil",
+        "brabarne",
+        "fayazsh",
+        "kisutton",
+        "acronyms@webex.bot",
+        "jasmigar",
+        "zsiedlec",
+        "ichuang",
+        "akinlaw",
+        "shatfalv",
+        "aoliuvak",
+        "sochabot",
+        "benboy",
+        "julimurp",
+        "olnoda",
+        "willjo",
+        "shysmith",
+        "bailewis",
+        "jenijohn"
+      ];
 
-  <head>
-    <title>Co-Op Links</title>
-    <link rel="icon" type="image/x-icon" href="https://www.cisco.com/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css?v=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Segoe+UI&display=swap"
-      rel="stylesheet"
-    />
-  </head>
- <body background="https://cdn.govexec.com/media/featured/cisco_webcast_back.png">
-  <div class="dropdown">
-  <p style="text-align:center;"><img src="https://cdn.freebiesupply.com/images/large/2x/cisco-logo-transparent.png" style="filter: drop-shadow(16px 16px 10px black)" alt="Cisco" class="center" width="200" height="100"></p>
-  <h1 class="heading">Co-Op Links</h1>
-  <div class="dropdown-content">
-    <a class="hover" href="index.html?v=1.0">Weekly</a>
-    <a href="certs.html?v=1.0">Certs</a>
-    <a href="case.html?v=1.0">Case Taking</a>
-    <a href="misc.html?v=1.0">Miscelaneous</a>
-    <a href="onboarding.html?v=1.0">Onboarding</a>
-  </div>
-</div>
+      // Get the entered CEC ID
+      var enteredCECId = document.getElementById("cecIdInput").value.toLowerCase();
 
-  <div class="container">
-    <div class="left-links">
-       <div id="week-range" style="color: coral; font-size: 40px;
-  font-weight: bold; text-shadow: 2px 2px 2px #333;"></div>
-    <h2 style="color: coral;">Certifications</h2>
-       <a title="To be added" href="ccna.html?v=1.0" class="coral" target="_blank">CCNA</a>
-       <a href="devnet.html?v=1.0" class="coral">Devnet</a>
-       <a href="ccnp.html?v=1.0" class="coral">CCNP</a>
-    </div>
-      <div class="middle">
-        <h2 style="color: #8fe376;">Resources</h2>
-        <a class="green" target="_blank" href="case.html?v=1.0">Case Taking</a>
-        <a class="green" target="_blank" href="misc.html?v=1.0">Miscelaneous</a>
-        <a class="green" target="_blank" href="onboarding.html?v=1.0">Onboarding</a>
-      </div>
-      <div class="far-right">
-        <h2 style="color: yellow;">Weekly</h2>
-        <a class="yellow" target="_blank" href="weekly.html?v=1.0">June 12-17th</a>
-        <a href="old.html" class="yellow" target="_blank">April 9th-15th</a>
-    </div>
-  </div>
-  <footer>
-    <p2>Made by Fayaz Shaikh. Hover over the title to select pages.</p2>
-  </footer>
+      // Check if the entered CEC ID is valid
+      if (validCECIds.includes(enteredCECId)) {
+        // Redirect to the homepage
+        window.location.href = "home.html";
+      } else {
+        alert("You are not on the list of registered coops. Please ensure you entered your CEC ID correctly or contact Fayaz for help.");
+      }
+    }
+  </script>
 </body>
-
 </html>
