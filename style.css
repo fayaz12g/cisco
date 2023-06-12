@@ -7,7 +7,7 @@ p2 {
 }
 
 body {
-  background-image: url('https://cdn.govexec.com/media/featured/cisco_webcast_back.png');
+  background-color: lightblue;
   font-family: Segoe UI;
   cursor: url('https://cdn.custom-cursor.com/db/8070/32/starter-space-cursor.png'), auto;
   zoom: 0.75
@@ -334,4 +334,24 @@ a.yellow {
   width: 200px;
   text-align: center;
   box-shadow: 5px 3px 2px #333;
+}
+
+.back-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button img {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
 }

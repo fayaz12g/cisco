@@ -46,3 +46,7 @@ window.addEventListener('popstate', function(event) {
 
 // Usage example
 updateURL('subpage1');
+
+function goToMenu() {
+  window.location.href = "menu.html";
+}
