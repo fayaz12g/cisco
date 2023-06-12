@@ -68,6 +68,7 @@
       // Check if the entered CEC ID is valid
       if (validCECIds.includes(enteredCECId)) {
         // Redirect to the homepage
+        localStorage.setItem("authenticated", "true");
         window.location.href = "home.html";
       } else {
         alert("You are not on the list of registered coops. Please ensure you entered your CEC ID correctly or contact Fayaz for help.");

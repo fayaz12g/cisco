@@ -51,3 +51,10 @@ function goToMenu() {
   window.location.href = "menu.html";
 }
 
+// Check if the authenticated flag is present in localStorage
+var authenticated = localStorage.getItem("authenticated");
+
+if (!authenticated) {
+  // Redirect to index.html or any other appropriate action
+  window.location.href = "index.html";
+}
